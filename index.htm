@@ -16,6 +16,19 @@
                 dobStart.type="button";
                 dobStart.id='myButton';
                 dobStart.value='Start';
+                dobStart.addEventListener('click', function(){
+                    alert('hello');
+                });
+                    var dob= document.getElementById('myDate').value;
+                    var dobDate= new Date(dob);
+                    var today= new Date();
+                    var age= today.getFullYear() - dobDate.getFullYear();
+                    var m= today.getMonth() - dobDate.getMonth();
+                    if(m<0 || (m===0 && today.getDate() < dobDate.getDate())){
+                        age--;
+                    }
+                    alert("You are " + age + " years old.");
+                });
                
                 
 
